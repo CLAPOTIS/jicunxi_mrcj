@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="format-detection" content="telephone=no">
+	    <script type="text/javascript">
+	        if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+	            var version = parseFloat(RegExp.$1);
+	            console.log(version);
+	            if (version > 2.3) {
+	                var phoneScale = parseInt(window.screen.width) / 640;
+	                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi,minimal-ui">');
+	            } else {
+	                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi,minimal-ui">');
+	            }
+	        } else {
+	            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi,minimal-ui">');
+	        }
+	    </script>
+	    <meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+	    <title>纪存希首页</title>
+	    <link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<div class="container">
+			<!--开始页面-->
+		    <div class="page begin_page">
+		        <div class="inner">
+		            <div class="logo"></div>
+		            <div class="signIn"></div>
+		            <div class="user">
+		            	<div class="avatar_frame"></div>
+						<div class="avatar"></div>
+		            	<div class="username">小九九</div>
+		            	<div class="signIn_info">	
+		            		<div class="signIn_days">
+		            			<span class="desc">您已经连续</span>
+		            			<div class="days-skin days-JS-num-set" id="score">
+						            <!--<span class="JS-num-val">4000</span>-->
+						        </div>
+		            			<span class="desc">天签到</span>
+		            		</div>
+		            		<div class="already_signIn">
+		            			<span class="signIn_num">12333</span>
+		            			<span class="desc">人正在参与</span>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="lottery_btn"></div>
+		        </div>
+		    </div>
+		    <!--抽奖页面-->
+		    <div class="page lottery_draw_page">
+		    	<div class="inner">
+			    	<div class="logo"></div>
+			        <div class="signIn"></div>
+			    	<div class="title"></div>
+			    	<div class="plate_bottom"></div>
+			        <div class="plate">
+			            <a class="plateBtn"></a>
+			        </div>  
+			        <div class="activity_reg_btn"></div>
+	            	<div class="activity_prize_btn"></div>
+					<!--提交信息-->
+			        <div class="apply_warp pop hide">
+			         	<div class="inner">
+				         	<div class="awards"></div>
+				         	<form class="apply" name="apply" method="post">
+								<input type="text" class="name" name="name" onmouseout="checkRealName()">
+								<input type="text" class="tel" name="tel" onmouseout="checkMobile()">
+								<input type="text" class="address" name="address" onmouseout="checkAddress()">
+				         	</form>
+				            <div class="submit_btn"></div>
+				        </div>
+				    </div>
+			        <!--未中奖-->
+			        <div class="no_draw_warp pop hide">
+				        <div class="no_draw">
+							<div class="close_btn"></div>
+				        </div>
+				    </div>
+				    <!--中奖了-->
+				    <div class="xxcy_warp pop hide">
+				        <div class="xxcy">
+				            <div class="close_btn"></div>
+				        </div>
+				    </div>
+				    <!--次数用完-->
+				    <div class="csyw_warp pop hide">
+				        <div class="csyw">
+				            <div class="close_btn"></div>
+				        </div>
+				    </div>
+				    <!--活动规则页面-->
+				    <div class="activity_reg_wrap pop hide">
+				        <div class="inner">
+				            <div class="activity_reg">
+				                <div class="close_btn"></div>
+				            </div>
+				        </div>
+				    </div>
+				    <!--活动奖品页面-->
+				    <div class="activity_prize_wrap pop hide">
+				        <div class="inner">
+				            <div class="activity_prize">
+				            	<div class="prize_display">
+									<span class="no_prize">还没中过奖，快去试试手气吧</span>
+				            	</div>
+				                <div class="close_btn"></div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+		    </div>		    
+		</div>
+		    
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+		<script src="webservice/FormCheck_Jquery.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script>
+		    //判断访问终端
+		    var browser={
+		        versions:function(){
+		            var u = navigator.userAgent, app = navigator.appVersion;
+		            return {
+		                trident: u.indexOf('Trident') > -1, //IE内核
+		                presto: u.indexOf('Presto') > -1, //opera内核
+		                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		                android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
+		                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		                iPad: u.indexOf('iPad') > -1, //是否iPad
+		                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		                weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
+		                qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		            };
+		        }(),
+		        language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		    }
+		</script>
+	</body>
+</html>

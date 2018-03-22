@@ -1,0 +1,347 @@
+html,body{
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	user-select:none;
+	padding:0;
+	margin:0;
+	background-color:#fff;
+	font-family:'宋体','STHeitiSC';
+	color:#fff;
+}
+.container{
+	width:640px;
+	max-width:640px;
+	height:100%;
+	position:relative;
+	margin:0 auto;
+	background-color:#fff;
+}
+.page{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:none;
+    overflow:hidden;
+}
+.page .inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.page .logo{
+	width:159px;
+	height:63px;
+	position:absolute;
+	top:35px;
+	left:27px;
+	background:url(../images/logo.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.page .signIn{
+	width:112px;
+	height:112px;
+	position:absolute;
+	top:22px;
+	left:497px;
+	background:url(../images/signIn.png) left top no-repeat;
+    background-size:100% 100%;
+}
+/*开始页面*/
+.begin_page{
+    display:block;
+    background:url(../images/bg.jpg) left top no-repeat;
+    background-size:100% 100%;
+}
+.begin_page .avatar_frame,.begin_page .avatar{
+	width:191px;
+	height:188px;
+	position:absolute;
+	top:168px;
+	left:232px;
+}
+.begin_page .avatar_frame{
+	background:url(../images/avatar_frame.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.begin_page .avatar{
+	background:url(../images/avatar.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.begin_page .username{
+	width:191px;
+	height:75px;
+	line-height:75px;
+	position:absolute;
+	top:356px;
+	left:232px;
+	font-size:32px;
+	text-align:center;
+}
+.begin_page .signIn_days{
+	width:379px;
+	height:88px;
+	line-height:88px;
+	position:absolute;
+	top:444px;
+	left:140px;
+	font-size:32px;
+	text-align:center;
+	white-space:nowrap;
+}
+/*签到天数*/
+.days-skin{display:inline-block;width:auto;height:36px;position:relative;text-align: right;}
+.days_JS-base-num{width:22px; height:36px; display:inline-block;margin-right:5px; background-image:url(../images/score_num.png); background-repeat:no-repeat;}
+.days_JS-num-0{background-position:0 0;}
+.days_JS-num-1{background-position:-31px 0;}
+.days_JS-num-2{background-position:-60px 0;}
+.days_JS-num-3{background-position:-89px 0;}
+.days_JS-num-4{background-position:-118px 0;}
+.days_JS-num-5{background-position:-147px 0;}
+.days_JS-num-6{background-position:-176px 0;}
+.days_JS-num-7{background-position:-205px 0;}
+.days_JS-num-8{background-position:-234px 0;}
+.days_JS-num-9{background-position:-263px 0;}
+.begin_page .already_signIn{
+	width:241px;
+	height:23px;
+	line-height:23px;
+	position:absolute;
+	top:530px;
+	left:199px;
+	font-size:32px;
+	text-align:center;
+	white-space:nowrap;
+}
+.begin_page .signIn_num{
+	color:#dfcb6d;
+}
+.begin_page .lottery_btn{
+	width:313px;
+	height:129px;
+	position:absolute;
+	bottom:236px;
+	left:170px;
+	background:url(../images/lottery_btn.png) left top no-repeat;
+    background-size:100% 100%;
+}
+/*抽奖页面*/
+.lottery_draw_page{
+	display:none;
+	background:url(../images/bg.jpg) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .title{
+	width:463px;
+	height:200px;
+	position:absolute;
+	top:149px;
+	left:78px;
+	background:url(../images/title.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .plate{
+	width:531px;
+	height:531px;
+	position:absolute;
+	/*top:323px;*/
+	bottom:154px;
+	left:46px;
+	background:url(../images/plate.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .plate_bottom{
+	width:463px;
+	height:403px;
+	position:absolute;	
+	bottom:0;
+	left:78px;
+	background:url(../images/plate_bottom.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .plateBtn{
+	width:259px;
+	height:259px;
+	position:absolute;
+	top:136px;
+	left:136px;
+	background:url(../images/plateBtn.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .activity_reg_btn{
+	width:248px;
+	height:75px;
+	position:absolute;
+	bottom:52px;
+	left:25px;
+	background:url(../images/activity_reg_btn.png) left top no-repeat;
+    background-size:100% 100%;
+}
+.lottery_draw_page .activity_prize_btn{
+	width:248px;
+	height:75px;
+	position:absolute;
+	bottom:52px;
+	right:25px;
+	background:url(../images/activity_prize_btn.png) left top no-repeat;
+    background-size:100% 100%;
+}
+/*提交信息*/
+.hide{
+	display:none;	
+}
+.apply_wrap{
+	display:none;
+}
+.apply_warp .inner {
+	width:532px;
+    height:504px;
+    position:absolute;
+    top:325px;
+    left:55px;
+    background:url("../images/apply_warp_bg.png") no-repeat center;
+    background-size:100% 100%;
+}
+.apply_warp .awards{
+	width:532px;
+    height:58px;
+    line-height:58px;
+    position:absolute;
+    top:112px;
+    left:0;
+    color:#c32f32;
+    font-size:32px;
+    text-align:center;
+}
+.apply_warp .apply input{
+	width:228px;
+	height:36px;
+	padding:0 10px;
+	font-size:16px;
+	text-align:center;
+	border:none;
+	border-radius:8px;
+	box-shadow:3px 2px 10px gray inset;
+}
+.apply_warp .apply .name{
+	position:absolute;
+	top:185px;
+	left:221px;
+}
+.apply_warp .apply .tel{
+	position:absolute;
+	top:239px;
+	left:221px;
+}
+.apply_warp .apply .address{
+	position:absolute;
+	top:295px;
+	left:221px;
+}
+.apply_warp .submit_btn{
+	width:248px;
+    height:69px;
+    position:absolute;
+    top:371px;
+    left:143px;
+    background: url("../images/submit_btn.png") no-repeat center;
+}
+/*未中奖&中奖了&次数用完*/
+.no_draw_warp,.xxcy_warp,.csyw_warp{
+	display:none;
+}
+.no_draw,.xxcy,.csyw{
+	width:532px;
+    height:162px;
+    position:absolute;
+    top:502px;
+    left:45px;	
+}
+.no_draw{
+	background:url("../images/mrzl_bg.png") no-repeat center;
+}
+.xxcy{
+	background:url("../images/xxcy_bg.png") no-repeat center;
+}
+.csyw{
+	background:url("../images/csyw_bg.png") no-repeat center;
+}
+.pop{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,.7);
+}
+.pop .close_btn{
+	width:78px;
+    height:80px;
+    position:absolute;
+    top:0;
+    right:0;
+    background: url("../images/close_btn.png") no-repeat center;
+}
+/*活动规则页面*/
+.activity_reg_wrap{
+	display:none;	
+}
+.activity_reg_wrap .activity_reg{
+    width:478px;
+    height:542px;
+    position: absolute;
+    top:312px;
+    left:79px;
+    background: url("../images/activity_reg_bg.png") no-repeat center;
+    background-size:100% 100%;
+}
+.activity_reg_wrap .activity_reg .close_btn{
+    width:78px;
+    height:80px;
+    position: absolute;
+    top:14px;
+    right:19px;
+    background: url("../images/close_btn.png") no-repeat center;
+}
+/*活动奖品页面*/
+.activity_prize_wrap{
+    display:none;
+}
+.activity_prize_wrap .activity_prize{
+    width:497px;
+    height:541px;
+    position: absolute;
+    top:313px;
+    left:55px;
+    background: url("../images/activity_prize_bg.png") no-repeat center;
+    background-size:100% 100%;
+}
+.activity_prize_wrap .activity_prize .close_btn{
+    width:78px;
+    height:80px;
+    position: absolute;
+    top:14px;
+    right:19px;
+    background: url("../images/close_btn.png") no-repeat center;
+}
+.prize_display{
+	width:382px;
+    height:343px;
+    position:absolute;
+    top:112px;
+    left:67px;
+    color:#47412f;
+    font-size:22px;
+}
+.msg{
+	display:block;
+	line-height:40px;
+}
+.highlight{
+	color:red;
+}
+.prize{
+	font-weight:bold;
+}
